@@ -95,13 +95,13 @@ public class MainActivity2 extends AppCompatActivity {
         OutputStream os = null;
         try{
             if(! file.exists()){
-                if(! file.mkdir()){
+                if(! file.mkdirs()){
                     Toast.makeText(MainActivity2.this,"mkdir Error",Toast.LENGTH_SHORT).show();
                     return;
                 }
             }
-            is = getAssets().open("animal.png");
-            File dir = new File(file,"animal.png");
+            is = getAssets().open("anminal.png");
+            File dir = new File(file,"anminal.png");
             os = new FileOutputStream(dir);
             byte[] bytes = new byte[is.available()];
             while (is.read(bytes) != -1)
